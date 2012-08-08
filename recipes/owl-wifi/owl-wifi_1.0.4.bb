@@ -8,8 +8,10 @@ RDEPENDS = "wireless-tools \
 	 wpa-supplicant \
 	 "
 
-SRC_URI = "http://www.hd-wireless.se/images/stories/public_pdf/owl-linux-arm-${PV}.tar.gz \
-	"
+#SRC_URI = "http://www.hd-wireless.se/images/stories/public_pdf/owl-linux-arm-${PV}.tar.gz \"
+SRC_URI = "http://linux.hd-wireless.se/pub/Linux/DownloadDrivers/owl-linux-arm-${PV}.tar.gz"
+SRC_URI[md5sum] = "e8df44b8c766436fdd798fa5cd6d1a02"
+	
 
 S = "${WORKDIR}/owl-linux-arm-${PV}"
 
