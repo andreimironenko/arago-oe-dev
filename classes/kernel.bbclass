@@ -67,9 +67,13 @@ KERNEL_IMAGEDEST = "boot"
 #
 export CMDLINE_CONSOLE = "console=${@bb.data.getVar("KERNEL_CONSOLE",d,1) or "ttyS0"}"
 
-KERNEL_VERSION = "${@get_kernelversion('${B}')}"
+#AM 
+KERNEL_VERSION ?= "${@get_kernelversion('${B}')}"
 KERNEL_MAJOR_VERSION = "${@get_kernelmajorversion('${KERNEL_VERSION}')}"
 
+#AM: 
+# Work around for the problem when the kernel version is not extracted 
+# properly in the kernel.bbclass from the git srctree.
 KERNEL_LOCALVERSION ?= ""
 
 # kernels are generally machine specific

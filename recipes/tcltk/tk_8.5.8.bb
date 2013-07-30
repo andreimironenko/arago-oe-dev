@@ -18,6 +18,10 @@ SRC_URI = "\
 SRC_URI[md5sum] = "13bf90602e16fc530e05196431021dc6"
 SRC_URI[sha256sum] = "9737da5c30e631281062b6acbb4753840f9e95657c78e37657d9c520589ab2d4"
 
+#SRC_URI[md5sum] = "faed1c9ad736344e7de210e4d50ba8b1"
+#SRC_URI[sha256sum] = "3691d75c00c54a982b07f592e96d0ae9efc607390138050164c950113b8d8b12"
+
+
 S = "${WORKDIR}/tk${PV}/unix"
 
 inherit autotools
