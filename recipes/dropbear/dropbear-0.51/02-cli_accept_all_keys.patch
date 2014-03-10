@@ -1,0 +1,13 @@
+Index: dropbear-0.51/cli-runopts.c
+===================================================================
+--- dropbear-0.51.orig/cli-runopts.c	2014-03-06 16:12:01.985493132 +0000
++++ dropbear-0.51/cli-runopts.c	2014-03-06 16:12:53.553493050 +0000
+@@ -101,7 +101,7 @@
+ 	cli_opts.no_cmd = 0;
+ 	cli_opts.backgrounded = 0;
+ 	cli_opts.wantpty = 9; /* 9 means "it hasn't been touched", gets set later */
+-	cli_opts.always_accept_key = 0;
++	cli_opts.always_accept_key = 1;
+ #ifdef ENABLE_CLI_PUBKEY_AUTH
+ 	cli_opts.privkeys = NULL;
+ #endif
