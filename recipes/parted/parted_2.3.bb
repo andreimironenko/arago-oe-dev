@@ -11,6 +11,7 @@ SRC_URI = "${GNU_MIRROR}/parted/parted-${PV}.tar.gz \
           "
            
 EXTRA_OECONF = "--disable-Werror ac_cv_func_calloc_0_nonnull=yes"
+EXTRA_OECONF += "--disable-device-mapper"
 
 inherit autotools pkgconfig
 
