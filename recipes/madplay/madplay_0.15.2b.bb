@@ -10,6 +10,8 @@ SRC_URI = "ftp://ftp.mars.org/pub/mpeg/${PN}-${PV}.tar.gz"
 inherit autotools
 ARM_INSTRUCTION_SET = "arm"
 
+EXTRA_OECONF = "--with-alsa"
+
 FILES_${PN} = "${bindir}/madplay"
 
 SRC_URI[md5sum] = "6814b47ceaa99880c754c5195aa1aac1"
