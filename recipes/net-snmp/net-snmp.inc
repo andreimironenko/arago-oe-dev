@@ -52,20 +52,20 @@ INITSCRIPT_PARAMS_${PN}-server = "defaults"
 LEAD_SONAME = "libnetsnmp.so"
 
 pkg_postinst_net-snmp-server() {
-if test "x$D" != "x"; then
-	D="-r $D"
-else
-	D="-s"
-fi
-update-rc.d $D snmpd defaults
+#if test "x$D" != "x"; then
+#	D="-r $D"
+#else
+#	D="-s"
+#fi
+#update-rc.d $D snmpd defaults
 }
 
 pkg_postrm_net-snmp-server() {
-if test "x$D" != "x"; then
-	D="-r $D"
-else
-	/etc/init.d/snmpd stop
-fi
-update-rc.d $D snmpd remove
+#if test "x$D" != "x"; then
+#	D="-r $D"
+#else
+#	/etc/init.d/snmpd stop
+#fi
+#update-rc.d $D snmpd remove
 }
 

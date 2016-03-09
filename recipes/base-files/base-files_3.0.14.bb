@@ -181,7 +181,11 @@ PACKAGE_ARCH_rt3000 = "rt3000"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-CONFFILES_${PN} = "${sysconfdir}/fstab ${sysconfdir}/hostname"
+CONFFILES_${PN}  = "${sysconfdir}/fstab ${sysconfdir}/hostname  \
+                    ${sysconfdir}/host.conf ${sysconfdir}/inputrc \
+					${sysconfdir}/issue /${sysconfdir}/issue.net \
+	     			${sysconfdir}/nsswitch.conf ${sysconfdir}/profile"
+	     			 
 CONFFILES_${PN}_micro = ""
 CONFFILES_${PN}_nylon = "${sysconfdir}/resolv.conf ${sysconfdir}/fstab ${sysconfdir}/hostname"
 CONFFILES_${PN}_slugos = "${sysconfdir}/resolv.conf ${sysconfdir}/fstab ${sysconfdir}/hostname"
